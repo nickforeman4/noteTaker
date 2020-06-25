@@ -52,6 +52,7 @@ const renderActiveNote = () => {
 // Get the note data from the inputs, save it to the db and update the view
 const handleNoteSave = function () {
   const newNote = {
+    id: Math.floor(Math.random() * 100),
     title: $noteTitle.val(),
     text: $noteText.val(),
   };
@@ -60,6 +61,7 @@ const handleNoteSave = function () {
     getAndRenderNotes();
     renderActiveNote();
   });
+  getAndRenderNotes();
 };
 
 // Delete the clicked note
@@ -77,6 +79,7 @@ const handleNoteDelete = function (event) {
     getAndRenderNotes();
     renderActiveNote();
   });
+  getAndRenderNotes();
 };
 
 // Sets the activeNote and displays it

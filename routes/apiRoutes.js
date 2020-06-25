@@ -8,8 +8,6 @@ router.get("/api/notes", function(req, res) {
     res.json(db)
 });
 
-let db = require("../db/db.json");
-const { Router } = require("express");
 router.post("/api/notes", function(req, res) {
     db.push(req.body)
     fs.writefileSync("./db/db.json", db, function(){
