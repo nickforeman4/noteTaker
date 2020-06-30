@@ -4,7 +4,7 @@ const path = require("path");
 const { Router } = require("express");
 
 router.get("/", function(req, res) {
-    console.log("Thome route")
+    console.log("Home route")
     res.sendFile(path.join(__dirname, "../public/index.html"))
 });
 
