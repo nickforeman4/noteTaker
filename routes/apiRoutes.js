@@ -3,14 +3,14 @@ const router = express.Router();
 
 let db = require("../db/db.json");
 router.get("/api/notes", function(req, res) {
-    db = json.parse(fs.readfileSync("./db/db.json", "UTF-8"))
+    db = json.parse(fs.readFileSync("./db/db.json", "UTF-8"))
     console.log(db)
     res.json(db)
 });
 
 router.post("/api/notes", function(req, res) {
     db.push(req.body)
-    fs.writefileSync("./db/db.json", db, function(){
+    fs.writeFileSync("./db/db.json", db, function(){
         console.log(db)
         res.json(db)
     })
@@ -25,7 +25,7 @@ router.delete("/api/notes/:id", function(req, res) {
         }
     }
     db = data
-    fs.writefileSync("./db/db.json", db, function(){
+    fs.writeFileSync("./db/db.json", db, function(){
         console.log(db)
         res.json(db)
     })
