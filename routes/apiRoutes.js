@@ -1,5 +1,4 @@
-const express = require("express");
-const router = express.Router();
+const router = require("express").Router();
 const store = require("../db/store")
 
 // GET "/api/notes" responds with all notes from the database

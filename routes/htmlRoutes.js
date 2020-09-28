@@ -1,7 +1,5 @@
-const express = require("express");
-const router = express.Router();
 const path = require("path");
-const { Router } = require("express");
+const router = require("express").Router();
 
 router.get("/", function(req, res) {
     console.log("Home route")
